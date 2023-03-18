@@ -14,6 +14,7 @@ void main() {
 
   runApp(MaterialApp(
     title: 'Flutter Demo',
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
       brightness: Brightness.dark,
       primarySwatch: Colors.blue,
@@ -44,7 +45,7 @@ class HomePage extends StatelessWidget {
               if (user.emailVerified) {
                 return const NotesView();
               } else {
-                return const LoginView();
+                return const VerifyEmailView();
               }
             } else {
               return const LoginView();
